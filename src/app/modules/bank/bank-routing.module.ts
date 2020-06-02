@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { BankHomeComponent } from './components/bank-home/bank-home.component';
 import { BankLayoutComponent } from './components/bank-layout/bank-layout.component';
-import { CustomerHomeComponent } from '../customer/components/customer-home/customer-home.component';
+
 
 export const BANK_COMPONENTS = [
 	BankLayoutComponent,
-	CustomerHomeComponent
+	BankHomeComponent
 ];
 
 const JOBS_ROUTES: Routes = [
@@ -27,4 +27,4 @@ const JOBS_ROUTES: Routes = [
 	],
 	exports: [RouterModule]
 })
-export class CustomerRoutingModule { }
+export class BankRoutingModule { }
