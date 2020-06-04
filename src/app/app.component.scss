@@ -1,0 +1,35 @@
+
+
+.ruf-banner-controls{
+    height: fit-content;
+     float:right;
+    justify-content: stretch;
+  }
+  // .ruf-button{
+  //   background: transparent  !important;
+  //   border: transparent !important;
+  //   outline: transparent !important;
+  // }
+  .ruf-banner-brand-title {
+    font-size: 1.4375rem;
+    font-weight: 400;
+    line-height: 1.4375rem;
+  }
+  .router-wrapper {
+    padding: 0 10px 10px 10px;
+    position: relative;
+  }
+  :host {
+    display: block;
+  }
+  
+  .example-full-width {
+    min-width: 150px;
+    width: 230px;
+  }
+  
+  .footer-controls {
+    width: 175px;
+    }
+  
+  

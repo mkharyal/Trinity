@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+@import './hb-theme.scss';
+@import '~@ruf/fis-ux-assets/styles/icon_font.css';
+
+ruf-banner-toolbar {
+	padding: 0rem !important;
+}
+button.mat-raised-button:focus, button.mat-button-toggle-button:focus{
+	background-color: purple !important;
+	color: white !important;
+}
+
+.ruf-toolbar-first-row ruf-banner-brand {
+	min-height: 3.25rem !important;
+	height: 3.25rem !important;
+	margin-left: 0.625rem !important;
+}
+
+.ruf-card mat-card {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.ruf-cust-footer .ruf-toolbar-first-row {
+	justify-content: center !important;
+}
+
+.words {
+	width: 700px !important;
+	margin-left: 25px !important;
+}
+
+.footclr {
+	color: blue;
+}
+
+.grid .mat-table[fisStyle] .mat-row {
+	cursor: initial;
+}
+
+.extn .mat-form-field-infix {
+	width: 53px;
+}
+
+mat-card-title {
+	margin: 15px 0px 10px !important 0px;
+	font-family: arial, sans-serif;
+	font-weight: normal;
+	font-size: 20px !important;
+}
+
+/*For Held files page grid only */
+.heldGrid span[data-text="Import Batch Validation Failed"] {
+	color: red;
+}
+.warn-color{
+	color:#cc0a00;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.matContentDividerClass {
+	border-bottom: 2px solid #E6E9ED;
+	border-top: 2px solid #E6E9ED;
+	padding: 8px 5px 6px;
+  }

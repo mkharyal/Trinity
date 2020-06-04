@@ -5,6 +5,7 @@ import { CustomerRoutingModule, CUSTOMER_COMPONENTS } from './customer-routing.m
 import { HBSharedModule } from '../../shared/hb-shared.module';
 
 import { MatTableModule } from '@angular/material';
+import { CustomerService } from './services/customer.service';
 
 @NgModule({
 	declarations: [
@@ -21,9 +22,9 @@ import { MatTableModule } from '@angular/material';
 	entryComponents: [
 	],
 	exports: [
-	]
-	//providers: [
-	//  JobsService
-	//],
+	],
+	providers: [
+	 CustomerService
+	],
 })
 export class CustomerModule { }

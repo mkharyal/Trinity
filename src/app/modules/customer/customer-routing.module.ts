@@ -10,11 +10,11 @@ export const CUSTOMER_COMPONENTS = [
 	CustomerHomeComponent
 ];
 
-const JOBS_ROUTES: Routes = [
+const CUSTOMER_ROUTES: Routes = [
 	{
 		path: '', component: CustomerLayoutComponent,
 		children: [
-			{ path: 'home', component: CustomerHomeComponent }
+			{ path: '', component: CustomerHomeComponent }
 		]
 	}
 ];
@@ -23,7 +23,7 @@ const JOBS_ROUTES: Routes = [
 	declarations: [],
 	imports: [
 		CommonModule,
-		RouterModule.forChild(JOBS_ROUTES)
+		RouterModule.forChild(CUSTOMER_ROUTES)
 	],
 	exports: [RouterModule]
 })

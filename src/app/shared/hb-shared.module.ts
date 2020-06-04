@@ -7,32 +7,32 @@ import { HB_SHARED_COMPONENTS } from './components';
 
 import { HB_SHARED_SERVICES } from './services';
 import { RouterModule } from '@angular/router';
+import { HBSharedRufModule } from './hb-shared-ruf.module';
 
 @NgModule({
 	declarations: [
 		...HB_SHARED_COMPONENTS,
-	
-
 	],
 	imports: [
 		CommonModule,
 		FormsModule,
 		ReactiveFormsModule,
 		HBSharedMaterialModule,
-	
-    FlexLayoutModule,
-    RouterModule
+		HBSharedRufModule,
+		FlexLayoutModule,
+		RouterModule
 	],
 	entryComponents: [
-		
+
 	],
-  providers: [...HB_SHARED_SERVICES],
+	providers: [...HB_SHARED_SERVICES],
 	exports: [
 		CommonModule,
 		FormsModule,
 		ReactiveFormsModule,
 		FlexLayoutModule,
-		HBSharedMaterialModule,		
+		HBSharedMaterialModule,
+		HBSharedRufModule,
 		...HB_SHARED_COMPONENTS,
 	]
 })

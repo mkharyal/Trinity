@@ -1,0 +1,17 @@
+<ruf-banner rufId="banner_select_color" color="primary">
+	<ruf-banner-brand title="Home Banking" showLogo="true" color="primary"></ruf-banner-brand>
+	<ruf-menubar fxLayoutAlign="flex-end" class="custom-label-header ruf-banner-filler">
+		<!-- <a rufMenubarItem [rufTrigger]="menuLabel" rufId="menu_label_inside_menubar_items" *ngFor="let item of items">
+			<ruf-menu-label #menuLabel
+											[label]="item.label"
+											[icon]="item.icon"
+											[selectedPath]="demoSelectedPath"
+											(select)="demoSelectedPath = $event.path; goNavigate($event.path, $event.params)"
+											[children]="item.children">
+			</ruf-menu-label>
+		</a> -->
+		<a rufMenubarItem routerLink="/cust" [selectable]="false" >Customer</a>
+		<a rufMenubarItem routerLink="/bank" [selectable]="false">Bank</a>
+		<a rufMenubarItem routerLink="/field" [selectable]="false">Field Staff</a>
+	</ruf-menubar>
+</ruf-banner>

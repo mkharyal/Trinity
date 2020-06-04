@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CustomerRoutingModule, BANK_COMPONENTS } from './bank-routing.module';
+import { BankRoutingModule, BANK_COMPONENTS } from './bank-routing.module';
 import { HBSharedModule } from '../../shared/hb-shared.module';
 
 import { MatTableModule } from '@angular/material';
@@ -10,7 +10,7 @@ import { MatTableModule } from '@angular/material';
 	declarations: [
 		...BANK_COMPONENTS,	],
 	imports: [
-		CustomerRoutingModule,
+		BankRoutingModule,
 		HttpClientModule,
 		MatTableModule,
 		FormsModule,
@@ -26,4 +26,4 @@ import { MatTableModule } from '@angular/material';
 	//  JobsService
 	//],
 })
-export class CustomerModule { }
+export class BankModule { }

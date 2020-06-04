@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "bank-layout.component.scss"
+    ],
+    "names": [],
+    "file": "bank-layout.component.css"
+}

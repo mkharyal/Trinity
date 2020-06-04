@@ -1,0 +1,105 @@
+<div fxLayout="column">
+    <mat-card fisstyle>
+        <mat-card-header>
+            <mat-card-title class="mat-title" color="primary">Welcome Customer</mat-card-title>
+           
+        </mat-card-header>
+        <mat-card-content class="matContentDividerClass">
+            <div fxFlex fxLayout="row" fxLayoutAlign=" start" fxLayout.lt-sm="column" fxLayoutGap="3%">
+            <div fxLayout="column" [formGroup]="customerForm" fxFlex="40%">
+                <!-- <form [formGroup]="activityLogFilterSearchFormGroup"> -->
+                <div [fxFlex] rufMarginTop="large" rufMarginBottom="small">
+                    <div fxLayout="column" fxLayoutGap="10px">
+                        <div fxLayout="row">
+                            <mat-form-field boxStyle>
+                                <mat-label class="mat-body-strong">Amount<span class="warn-color">*</span></mat-label>
+                                <input matInput placeholder="Amount" formControlName="amount"
+                                    [errorStateMatcher]="matcher"
+                                    onkeypress="return (event.charCode>= 48 && event.charCode<=57 || event.charCode===46)">
+                                <mat-error class="mat-body-strong"
+                                    *ngIf="customerForm.controls.amount.errors?.required">
+                                    Please enter Amount
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout="row">
+                            <mat-form-field boxStyle>
+                                <mat-label class="mat-body-strong">Amount Deposit/Withdraw<span class="warn-color">*</span>
+                                </mat-label>
+                                <mat-select placeholder="--Select one--" formControlName="transactionType"
+                                 >
+                                    <mat-option>--Select one--</mat-option>
+                                    <mat-option value="Deposit">
+                                        Deposit
+                                    </mat-option>
+                                    <mat-option value="Withdraw">
+                                        Withdraw
+                                    </mat-option>
+                                </mat-select>
+                                <mat-error class="mat-body-strong"
+                                    *ngIf="customerForm.controls.transactionType.errors?.required">
+                                    Please select Address Type
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout="row">
+                            <mat-form-field boxStyle>
+                                <mat-label class="mat-body-strong">Address Type<span class="warn-color">*</span>
+                                </mat-label>
+                                <mat-select placeholder="--Select one--" formControlName="addressType"
+                                    >
+                                    <mat-option>--Select one--</mat-option>
+                                    <mat-option value="Permanent">
+                                        Permanent Address
+                                    </mat-option>
+                                    <mat-option value="Location">
+                                        Location
+                                    </mat-option>
+                                </mat-select>
+                                <mat-error class="mat-body-strong"
+                                    *ngIf="customerForm.controls.addressType.errors?.required">
+                                    Please select Address Type
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout="row">
+                            <mat-form-field boxStyle>
+                                <mat-label class="mat-body-strong">Address<span class="warn-color">*</span></mat-label>
+                                <textarea matInput placeholder="Amount" formControlName="address"
+                                    [errorStateMatcher]="matcher" rows="4"></textarea>
+                                <mat-error class="mat-body-strong"
+                                    *ngIf="customerForm.controls.amount.errors?.required">
+                                    Please enter Amount
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout="row">
+                            <mat-form-field boxStyle>
+                                <mat-label class="mat-body-strong">Contact No<span class="warn-color">*</span></mat-label>
+                                <input matInput placeholder="Amount" formControlName="phone">
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout="row">
+                            <mat-form-field boxStyle>
+                                <mat-label class="mat-body-strong">Enter OTP<span class="warn-color">*</span></mat-label>
+                                <input matInput placeholder="Transaction OTP" formControlName="otp"
+                                    [errorStateMatcher]="matcher"
+                                    onkeypress="return (event.charCode>= 48 && event.charCode<=57)">
+                                <mat-error class="mat-body-strong"
+                                    *ngIf="customerForm.controls.amount.errors?.required">
+                                    Please enter OTP
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+        </mat-card-content>
+        <div fxLayoutOut="row" fxLayoutAlign="flex-start" fxLayoutGap="10px">
+			<button mat-raised-button type="button" color="primary" (click)="onSubmit()">Save</button>
+			<button mat-raised-button type="button" (click)="onCancelClick()">Cancel</button>
+		</div>
+    </mat-card>
+</div>

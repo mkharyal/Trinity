@@ -43,7 +43,8 @@ import {
 	MatTreeModule,
 	NativeDateModule,
 } from '@angular/material';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+//import { DragDropModule } from '@angular/cdk/drag-drop';
+
 
 @NgModule({
 	imports: [
@@ -88,7 +89,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 		MatTooltipModule,
 		MatTreeModule,
 		NativeDateModule,
-		DragDropModule
+		//DragDropModule
 	],
 	exports: [
 		MatButtonModule,
@@ -132,7 +133,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 		MatTooltipModule,
 		MatTreeModule,
 		NativeDateModule,
-		DragDropModule
+		//DragDropModule
 	],
 })
 export class HBSharedMaterialModule { }
